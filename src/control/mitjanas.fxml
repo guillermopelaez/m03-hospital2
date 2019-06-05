@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/11.0.1"  xmlns:fx="http://javafx.com/fxml/1"  fx:controller="control.ControllerLlista">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="31.0" prefHeight="369.0" prefWidth="568.0">
+         <children>
+            <TabPane layoutY="-16.0" prefHeight="541.0" prefWidth="688.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Dies introduits">
+                     <content>
+                        <PieChart prefHeight="370.0" prefWidth="518.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="Mitjana anims">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <PieChart layoutX="68.0" layoutY="56.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Mitjana fisic">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <PieChart layoutX="71.0" layoutY="62.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Menjar + consumit">
+                     <content>
+                        <PieChart />
+                     </content>
+                  </Tab>
+                  <Tab text="millors anims">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="millor fisic">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
