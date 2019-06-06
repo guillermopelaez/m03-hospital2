@@ -2,37 +2,53 @@ package control;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 
 public class Persona  {
-    private int estadoAnimo ;
-    private int estadoFisico;
+    ArrayList<String> dias = new ArrayList<String>();
+    ArrayList<String> animodias = new ArrayList<String>();
+    ArrayList<String> fisicodias = new ArrayList<String>();
 
-    public String[] getComida() {
-        return comida;
+    private String estadoAnimo;
+    private String estadoFisico;
+    private LocalDate diaActual;
+
+    public Persona(){
+
     }
 
-    public void setComida(String[] comida) {
-        this.comida = comida;
+    public Persona(ArrayList<String> dias, String estadoAnimo, String estadoFisico, LocalDate diaActual) {
+        this.dias = dias;
+        this.estadoAnimo = estadoAnimo;
+        this.estadoFisico = estadoFisico;
+        this.diaActual = diaActual;
     }
 
-    private String[] comida ;
+    public ArrayList<String> getDias() {
+        return dias;
+    }
 
+    public void setDias(ArrayList<String> dias) {
+        this.dias = dias;
+    }
 
-    public int getEstadoAnimo() {
+    public String getEstadoAnimo() {
         return estadoAnimo;
     }
 
-    public void setEstadoAnimo(int estadoAnimo) {
+    public void setEstadoAnimo(String estadoAnimo) {
         this.estadoAnimo = estadoAnimo;
     }
 
-    public int getEstadoFisico() {
+    public String getEstadoFisico() {
         return estadoFisico;
     }
 
-    public void setEstadoFisico(int estadoFisico) {
+    public void setEstadoFisico(String estadoFisico) {
         this.estadoFisico = estadoFisico;
     }
+
+
 
 }
 
