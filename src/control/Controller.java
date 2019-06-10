@@ -8,11 +8,15 @@ import javafx.scene.control.TextField;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     Persona persona = new Persona();
     int[] contador = new int[6];
+
+    ArrayList<Integer> valoresFisico;
+    ArrayList<Integer> valoresAnimo;
 
     @FXML
     private Button btnAfegir;
@@ -60,10 +64,13 @@ public class Controller implements Initializable {
 
     @FXML
     void ClicarGuardar(ActionEvent event) {
-        for (int i = 0; i <persona.animodias.size() ; i++) {
-            persona.animodias.add(txtAnimo.getText());
 
-        }
+        int animo= Integer.parseInt(txtAnimo.getText());
+        int fisico= Integer.parseInt(txtFisico.getText());
+
+
+        valoresAnimo.add(animo);
+        valoresFisico.add(fisico);
 
     }
 
@@ -106,9 +113,49 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtAnimo.setText("un valor de 0 a 5");
-        txtFisico.setText("un valor de 0 a 5");
+
+        valoresAnimo = new ArrayList<>();
+        valoresFisico = new ArrayList<>();
 
 
+
+
+
+
+
+
+
+    }
+
+    @FXML
+    void clicarVeure(ActionEvent event) {
+
+    }
+
+    public void clicarVeure(javafx.event.ActionEvent actionEvent) {
+        double mediaAnimo = 0;
+        int sumaAnimo = 0;
+        int sumaFisico = 0;
+        double mediaFisico = 0;
+
+        for (int i = 0; i < valoresAnimo.size(); i++) {
+            sumaAnimo += valoresAnimo.get(i);
+
+
+        }
+        mediaAnimo = (sumaAnimo/valoresAnimo.size());
+
+
+        for (int i = 0; i < valoresFisico.size(); i++) {
+            sumaFisico += valoresFisico.get(i);
+
+
+        }
+        mediaFisico = (sumaFisico/valoresFisico.size());
+
+
+
+        System.out.println(mediaAnimo);
+        System.out.println(mediaFisico);
     }
 }
